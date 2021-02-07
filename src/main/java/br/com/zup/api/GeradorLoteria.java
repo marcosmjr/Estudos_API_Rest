@@ -20,8 +20,8 @@ public class GeradorLoteria {
             numeroLoteriaArray[i] = decimalFormat.format(numero[i]);
 
             for(int j = 0; j <= numero.length; j++){
-                if(i != 0 && numeroLoteriaArray[i-1] == numeroLoteriaArray[i]){
-                    i --;
+                if(i != 0 && numeroLoteriaArray[i-1].equals(numeroLoteriaArray[i])){
+                    i--;
                 }
             }
         }
