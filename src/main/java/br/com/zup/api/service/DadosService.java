@@ -15,7 +15,7 @@ public class DadosService {
 
 
     public DadosUsuarioModel getId(int id){return dadosRepository.findById(id).orElse(null);}
-    public DadosUsuarioModel getEmail(String email){return dadosRepository.findByEmail(email);}
+    public List<DadosUsuarioModel> getEmail(String email){return dadosRepository.findByEmail(email);}
     public List<DadosUsuarioModel> getEmails(){return dadosRepository.findAll();}
     public DadosUsuarioModel getNumeroLotaria(String numeroLoteria){return dadosRepository.findByNumeroLoteria(numeroLoteria);}
     public DadosUsuarioModel saveEmail(DadosUsuarioModel email){return dadosRepository.save(email);}

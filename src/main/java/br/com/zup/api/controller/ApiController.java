@@ -30,7 +30,7 @@ public class ApiController {
         return dadosService.getId(id);}
 
     @GetMapping("procuraEmail/{email}")
-    public DadosUsuarioModel procuraEmail(@PathVariable String email){
+    public List<DadosUsuarioModel> procuraEmail(@PathVariable String email){
         return dadosService.getEmail(email);
     }
 
