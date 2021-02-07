@@ -16,7 +16,7 @@ public class GeradorLoteria {
     public void gerador() {
         for (int i = 0; i < numero.length; i++ ){
 
-            numero[i] = Math.random()*60;
+            numero[i] = Math.random()*59;
             numeroLoteriaArray[i] = decimalFormat.format(numero[i]);
 
             for(int j = 0; j <= numero.length; j++){
