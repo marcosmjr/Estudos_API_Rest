@@ -19,9 +19,11 @@ public class GeradorLoteria {
             numero[i] = Math.random()*59;
             numeroLoteriaArray[i] = decimalFormat.format(numero[i]);
 
-            for(int j = 0; j <= numero.length; j++){
-                if(i != 0 && numeroLoteriaArray[i-1].equals(numeroLoteriaArray[i])){
-                    i--;
+            if(i != 0){
+                for(int j = 0; j < numero.length; j++){
+                    if( j != i && numeroLoteriaArray[i].equals(numeroLoteriaArray[j])){
+                        i--;
+                    }
                 }
             }
         }
